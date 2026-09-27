@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فورم ثبت نام دانش‌آموزان | آموزشگاه آیروخش</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: "Tahoma", Arial, sans-serif;
+      background: #ececff;
+      padding: 20px;
+      direction: rtl;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 35px 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      border-left: 6px solid #6A5ACD;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #6A5ACD;
+      font-size: 30px;
+    }
+    form label { display: block; margin-top: 15px; font-weight: bold; color: #333; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: #f0f0ff;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #6A5ACD;
+      box-shadow: 0 0 8px rgba(106,90,205,0.3);
+      outline: none;
+    }
+    fieldset {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f7f7ff;
+    }
+    legend { font-weight: bold; color: #6A5ACD; }
+    .options label {
+      font-weight: normal;
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      width: 100%;
+      background: linear-gradient(to right, #6A5ACD, #483D8B);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(to right, #483D8B, #6A5ACD);
+    }
+    select { background: #f0f0ff; }
+    textarea { resize: vertical; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>فورم ثبت نام دانش‌آموزان<br><small style="font-size:16px;color:#555;">آموزشگاه آیروخش</small></h1>
+    <form action="#" method="post">
+
+      <label for="firstname">نام</label>
+      <input type="text" id="firstname" name="firstname" placeholder="نام خود را وارد کنید" required>
+
+      <label for="lastname">تخلص</label>
+      <input type="text" id="lastname" name="lastname" placeholder="تخلص خود را وارد کنید" required>
+
+      <label for="email">ایمیل</label>
+      <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+      <label for="age">سن</label>
+      <input type="number" id="age" name="age">
+
+      <label for="phone">شماره تماس</label>
+      <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXX">
+
+      <label for="date">تاریخ</label>
+      <input type="date" id="date" name="date">
+
+      <label for="province">ولایت</label>
+      <select id="province" name="province">
+        <option value="">-- انتخاب ولایت --</option>
+        <option value="balkh">بلخ</option>
+        <option value="kabul">کابل</option>
+        <option value="herat">هرات</option>
+      </select>
+
+      <label for="department">رشته</label>
+      <select id="department" name="department">
+        <option value="">-- انتخاب رشته --</option>
+        <option value="it">تکنالوژی معلوماتی</option>
+        <option value="design">گرافیک دیزاین</option>
+        <option value="network">شبکه‌های کامپیوتری</option>
+        <option value="ai">هوش مصنوعی</option>
+      </select>
+
+      <fieldset>
+        <legend>جنسیت</legend>
+        <div class="options">
+          <label><input type="radio" name="gender" value="male"> مرد</label>
+          <label><input type="radio" name="gender" value="female"> زن</label>
+        </div>
+      </fieldset>
+
+      <label for="suggestions">پیشنهاد مهارت‌های جدید</label>
+      <select id="suggestions" name="suggestions">
+        <option value="">-- انتخاب مهارت پیشنهادی --</option>
+        <option value="3dDesign">طراحی سه‌بعدی</option>
+        <option value="webDevelopment">برنامه‌نویسی وب</option>
+        <option value="cyberSecurity">امنیت سایبری</option>
+        <option value="robotics">رباتیک</option>
+        <option value="dataScience">داده‌کاوی</option>
+      </select>
+
+      <label for="message">نظریات</label>
+      <textarea id="message" name="message" rows="4" placeholder="نظر خود را بنویسید..."></textarea>
+
+      <button type="submit">ارسال فورم</button>
+    </form>
+  </div>
+</body>
+</html>
